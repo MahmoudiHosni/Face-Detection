@@ -5,7 +5,7 @@ Created on Thu Nov  8 09:28:35 2018
 
 @author: hosni
 """
-#header = np.fromfile('/home/hosni/Downloads/YALE/faces/subject01.centerlight.pgm' )
+#header = np.fromfile('/YALE/faces/subject01.centerlight.pgm' )
 #print(header)
 import numpy as np
 import glob
@@ -27,11 +27,11 @@ import imghdr, struct
 
 
 liste=[]
-for i in os.listdir("/home/hosni/Downloads/YALE/faces/"):
+for i in os.listdir("/Downloads/YALE/faces/"):
 #    if imghdr.what(i)!='.pgm':
     if i != '*.pgm':
 #        print(i)
-        im=Image.open("/home/hosni/Downloads/YALE/faces/"+i)
+        im=Image.open("/Downloads/YALE/faces/"+i)
         print(im)
         Data=list(im.getdata())
         transposer=np.transpose(Data)
